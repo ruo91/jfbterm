@@ -1,0 +1,7 @@
+##
+## 드보락 + 두벌식
+## (dvorak + qwerty 2beol type keyboard layout)
+##
+
+usemap dvorak.map
+import qwerty_2beol

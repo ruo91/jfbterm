@@ -1,0 +1,7 @@
+##
+## 드보락 + 세벌식 390
+## (dvorak + qwerty 3beol 390 type keyboard layout)
+##
+
+usemap dvorak.map
+import qwerty_3beol_390

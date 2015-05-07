@@ -1,0 +1,7 @@
+##
+## 드보락 + 세벌식 최종
+## (dvorak + qwerty 3beol final type keyboard layout)
+##
+
+usemap dvorak.map
+import qwerty_3beol_final

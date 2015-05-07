@@ -1,0 +1,61 @@
+##
+## 세벌식 최종 자판
+## (qwerty 3beol final type keyboard layout)
+##
+
+import qwerty_3beol_390
+
+M	"
+<	,
+>	.
+/	ㅗ
+?	!
+
+H	0
+J	1
+K	2
+L	3
+:	4
+"	·
+
+## 다음 두 줄은 '드보락_세벌식_최종'을 위한 것이다.
+,	,
+.	.
+
+C	ㅋ	jong
+D	ㄹㅂ	jong
+V	ㄱㅅ	jong
+E	ㄴㅈ	jong
+G	ㅒ
+R	ㄹㅎ	jong
+T	ㄹㅅ	jong
+F	ㄹㅁ	jong
+Y	5
+U	6
+I	7
+O	8
+P	9
+[	(
+{	%
+]	<
+}	/
+B	?
+N	-
+
+~	※
+`	*
+!	ㄲ	jong
+@	ㄹㄱ	jong
+#	ㅈ	jong
+$	ㄹㅍ	jong
+%	ㄹㅌ	jong
+^	=
+&	“
+*	”
+(	'
+)	~
+-	)
+_	;
+=	>
+\	:
+|	\

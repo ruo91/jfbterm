@@ -1,0 +1,44 @@
+Hangul Patch 3.5 for JFBTERM 0.4.7-7 using Hanterm Automata
+patch by Young Chol Song(nskystars at yahoo.com)
+bug reports, suggestions, and questions are welcome
+http://hangul-jfbterm.kldp.net
+
+   * Installation
+
+        ./configure --prefix=/usr
+        make
+        su
+        make install
+        cat termcap.jfbterm >> /etc/termcap
+        tic terminfo.jfbterm
+	cp jfbterm.conf.sample.han /usr/etc/jfbterm.conf
+
+   * The configuration file is located at /usr/etc/jfbterm.conf
+     Hangul input orignally only works on 'euc-kr' and 'utf-8' locales
+     However, you can force it to work on the locale of your choice by
+     including/editing the following line(s)
+
+        input	:	UTF-8
+
+     or
+
+        input	:	EUC-KR
+
+     depending on what type of codeset you wish to input with
+
+   * This patch also supports two kinds of keyboard layouts, Dubeolsik(2)
+     and Sebeolsik(3). The default is Dubeolsik, but if you wish to use the
+     Sebeolsik final layout include the following:
+
+        keyboard	:	3
+
+     or
+
+        keyboard	:	3final
+
+     OR, to use Sebeolsik 390 layout:
+
+        keyboard	:	390
+
+   * Shift+Space for Korean/English input
+
