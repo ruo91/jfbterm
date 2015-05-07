@@ -361,10 +361,13 @@ void	tterm_reset_utmp(TTerm* p)
 	setutent();
 	utp = getutid(&utmp);
 	utp->ut_type = DEAD_PROCESS;
-	memset(utp->ut_user, 0, sizeof(utmp.ut_user));
-	utp->ut_type = DEAD_PROCESS;
-	time(&(utp->ut_time));
-	pututline(utp);
+	// https://bugs.launchpad.net/ubuntu/+source/jfbterm/+bug/253163/+activity
+	if (utp != NULL) {
+		memset(utp->ut_user, 0, sizeof(utmp.ut_user));
+		utp->ut_type = DEAD_PROCESS;
+		time(&(utp->ut_time));
+		pututline(utp);
+	}
 	endutent();
 }
 
