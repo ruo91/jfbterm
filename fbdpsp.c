@@ -827,8 +827,11 @@ void tfbm_reverse_32bpp_packed(
 
 #ifdef JFB_VGA16FB
 
+#ifdef __GLIBC__
+#include <sys/io.h>
+#else
 #include <asm/io.h>
-#include <asm/system.h>
+#endif
 
 #define GRAPHICS_ADDR_REG 0x3ce         /* Graphics address register. */
 #define GRAPHICS_DATA_REG 0x3cf         /* Graphics data register. */

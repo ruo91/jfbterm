@@ -184,7 +184,7 @@ void tapp_init(TApplication* p)
 	p->gExecShellArgv = NULL;
 	p->gConfFile = FILE_JFBTERM_CONF;
 	p->gConfEncoding = NULL;
-
+	signal(SIGCHLD, sigchld);
 	atexit(tapp_final_at_exit);
 }
 

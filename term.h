@@ -44,7 +44,7 @@ typedef struct Raw_TTerm {
 } TTerm;
 
 void tterm_start(TTerm* p, const char* tn, const char* en);
-
+void sigchld(int sig);
 extern TTerm gTerm;
 
 #endif /* INCLUDE_TERM_H */

@@ -31,6 +31,7 @@
 
 #include <sys/types.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 void util_privilege_init();
 void util_privilege_on();
@@ -48,5 +49,8 @@ void util_euc_to_sjis(u_char* ch, u_char* cl);
 void util_sjis_to_jis(u_char* ch, u_char* cl);
 
 int util_search_string(const char* s, const char** array);
+
+#define PAGE_SIZE (sysconf(_SC_PAGESIZE))
+#define PAGE_MASK (~(PAGE_SIZE-1))
 
 #endif /* INCLUDE_UTIL_H */

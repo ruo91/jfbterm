@@ -1,0 +1,353 @@
+jfbterm (0.4.7-8) unstable; urgency=low
+
+  * QA upload.
+    + Set maintainer to Debian QA Group <packages@qa.debian.org>.
+    + Remove previous maintainers and uploaders. (Closes: #541030).
+  * Acknowledge NMUs.
+  * Replace automake1.4 build-dep with automake (>=1.10). (Closes: #549141).
+    + Add autoconf build-dep.
+    + Call autoreconf on configure.
+  * Copy in config.{guess,sub} on configure, rm then on clean.
+  * Move xfonts-base depends to suggests.
+  * Remove useless maintainer scripts.
+  * Add ${misc:Depends} for debhelper package.
+  * Make clean not ignore errors.
+  * Bump debhelper build-dep and compat to 5.
+  * Bump Standards Version to 3.8.3.
+
+ -- Barry deFreese <bdefreese@debian.org>  Fri, 02 Oct 2009 13:30:41 -0400
+
+jfbterm (0.4.7-7.2) unstable; urgency=low
+
+  * Non-maintainer upload with acknowledgement of Fumitoshi.
+  * Fix FTBFS by removing asm/page.h from fbcommon.c (Closes: #479981)
+
+ -- Kenshi Muto <kmuto@debian.org>  Wed, 04 Jun 2008 14:45:11 +0900
+
+jfbterm (0.4.7-7.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix FTBFS wrt asm/io.h (Closes: 428928).
+
+ -- Pierre Habouzit <madcoder@debian.org>  Wed, 18 Jul 2007 16:29:23 +0200
+
+jfbterm (0.4.7-7) unstable; urgency=low
+
+  * debian/rules: enable vga16fb for DEB_HOST_GNU_TYPE=i486-linux-gnu 
+                  and x86_64-linux-gnu
+  * fbdpsp.c: remove #include <asm/system.h>
+    closes: Bug#399803
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Wed, 29 Nov 2006 00:23:40 +0900
+
+jfbterm (0.4.7-6) unstable; urgency=low
+
+  * fix typo PAGE_MASK
+    closes: Bug#394216
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Mon,  6 Nov 2006 01:18:44 +0900
+
+jfbterm (0.4.7-5) unstable; urgency=medium
+
+  * Maintainer Upload
+    use sysconf for PAGE_MASK. closes: Bug#394216
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Sat, 28 Oct 2006 02:14:58 +0900
+
+jfbterm (0.4.7-4.1) unstable; urgency=medium
+
+  * Non-Maintainer Upload 
+  * Changed build-dep on automake to automake1.4
+  * Defined PAGE_SIZE and PAGE_MASK properly (closes: #394216)
+
+ -- Bas Zoetekouw <bas@debian.org>  Mon, 23 Oct 2006 21:40:47 +0200
+
+jfbterm (0.4.7-4) unstable; urgency=low
+
+  * adjust font path in /etc/jfbterm.conf for X font transition
+   closes: Bug#362752
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Tue, 25 Apr 2006 01:21:39 +0900
+
+jfbterm (0.4.7-3) unstable; urgency=low
+
+  * disable hardware status line capability, since it would change
+    terminal lines dynamically and would be problem with screen(1).
+    closes: Bug#304091
+  * build with --enable-direct-color
+    closes: Bug#304020
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Tue, 19 Apr 2005 01:31:46 +0900
+
+jfbterm (0.4.7-2) unstable; urgency=high
+
+  * fix screen lock problem on d-i 2nd stage
+    reported by Kenshi Muto <kmuto@debian.org>
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Sat, 12 Mar 2005 01:12:29 +0900
+
+jfbterm (0.4.7-1) unstable; urgency=high
+
+  * New upstream release
+  * SECURITY: fix local exploit
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Fri, 25 Feb 2005 00:03:28 +0900
+
+jfbterm (0.4.6-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Sat, 29 May 2004 15:24:00 +0900
+
+jfbterm (0.4.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Sat,  6 Mar 2004 03:25:53 +0900
+
+jfbterm (0.4.4-3) unstable; urgency=low
+
+  * don't print message when quite option enabled.
+    closes: Bug#234015
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Sun, 22 Feb 2004 01:50:51 +0900
+
+jfbterm (0.4.4-2) unstable; urgency=low
+
+  * fix line characters problem in other,*,iconv,UTF-8 mode.
+    closes: Bug#224020
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Sat, 27 Dec 2003 01:05:54 +0900
+
+jfbterm (0.4.4-1) unstable; urgency=low
+
+  * new upstream version
+   - fix segfault by resize(1)
+   - update jfbterm.1 jfbterm.conf.5
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Tue, 30 Sep 2003 00:52:59 +0900
+
+jfbterm (0.4.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Tue, 16 Sep 2003 00:49:42 +0900
+
+jfbterm (0.4.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Sun, 14 Sep 2003 05:53:58 +0900
+
+jfbterm (0.4.1-3) unstable; urgency=low
+
+  * previous FTBFS fixes is not incomplete
+  * fix typo in jfbterm.conf
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Sat,  6 Sep 2003 02:24:52 +0900
+
+jfbterm (0.4.1-2) unstable; urgency=low
+
+  * fix FTBFS bub on some arch
+  * update jfbterm.conf
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Fri,  5 Sep 2003 01:12:32 +0900
+
+jfbterm (0.4.1-1) unstable; urgency=low
+
+  * New upstream release
+  * jfbterm is not only for Japanese.
+    debian/control: updated. closes: Bug#208521
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Thu,  4 Sep 2003 04:13:35 +0900
+
+jfbterm (0.4.0-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control: depends unifont or xfonts-base
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Wed,  3 Sep 2003 00:59:38 +0900
+
+jfbterm (0.3.16-1) unstable; urgency=low
+
+  * New upstream release
+  * fix pty problem: closes: Bug#208147
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Tue,  2 Sep 2003 01:40:52 +0900
+
+jfbterm (0.3.15-1) unstable; urgency=low
+
+  * New upstream release
+  * fix vga16fb problem. closes: Bug#207842
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Mon,  1 Sep 2003 01:04:55 +0900
+
+jfbterm (0.3.14-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Sun, 31 Aug 2003 05:00:33 +0900
+
+jfbterm (0.3.13-1) unstable; urgency=low
+
+  * New upstream release
+  * take over: hattas still in co-maintainers
+  * Translate documentation into English and add manuals closes: Bug#191911
+  * Upstream has been moved to sourceforge.jp
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Sat, 30 Aug 2003 04:08:38 +0900
+
+jfbterm (0.3.12-2) unstable; urgency=low
+
+  * added missing build-depends.(closes: Bug#171855)
+
+ -- Hatta Shuzo <hattas@debian.org>  Tue, 17 Dec 2002 20:05:31 +0900
+
+jfbterm (0.3.12-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hatta Shuzo <hattas@debian.org>  Wed,  4 Dec 2002 14:51:22 +0900
+
+jfbterm (0.3.11-2) unstable; urgency=low
+
+  * cvs 20020802 version.
+  * util.c: #include <string.h>
+  * configure.in: check ioperm to enable vga16fb
+  * fbcommon.c: #include <sys/io.h> for only ifdef JFB_VGA16FB
+     fixes portability issues
+  * remove dh_suidregister from debian/rules Closes: Bug#84585
+
+ -- Hatta Shuzo <hattas@debian.org>  Fri,  2 Aug 2002 12:49:08 +0900
+
+jfbterm (0.3.11-1) unstable; urgency=low
+
+  * New upstream release
+  * first release from sourceforge.jp
+  * 1bpp/2bpp support            
+  * Dimmer support (after 3 minutes no event, screen blank)
+  * Reverse color support (only work on 2bpp)
+  * fixed type in Desctiption: Closes: Bug#124771,#146709
+
+ -- Hatta Shuzo <hattas@debian.org>  Thu,  1 Aug 2002 19:20:17 +0900
+
+jfbterm (0.3.10-3) unstable; urgency=low
+
+  * applied mmap patch by AMANO Kazuhiro.
+  * applied termial size patch by AMANO Kazuhiro.
+  * applied esc sequence patch by Hiroshi Kawashima.
+
+ -- Hatta Shuzo <hattas@debian.org>  Wed,  8 Nov 2000 14:53:36 +0900
+
+jfbterm (0.3.10-2) unstable; urgency=high
+
+  * fixed font path. (closes: #57844)
+  * fixed buffer overflow in tapp_init(main.c) pointed out by
+    Fumitoshi UKAI <ukai@debian.org>
+
+ -- Hatta Shuzo <hattas@debian.or.jp>  Sun, 30 Apr 2000 13:08:21 +0900
+
+jfbterm (0.3.10-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hatta Shuzo <hattas@debian.or.jp>  Mon, 24 Jan 2000 14:54:31 +0900
+
+jfbterm (0.3.8-1) frozen unstable; urgency=low
+
+  * New upstream release
+
+ -- Hatta Shuzo <hattas@debian.or.jp>  Tue, 18 Jan 2000 12:16:54 +0900
+
+jfbterm (0.3.7-2) unstable; urgency=low
+
+  * applied Amano Kazhiro's -e patch. 
+  * use gunzip instead of gzip for inflation of font file.
+
+ -- Hatta Shuzo <hattas@debian.or.jp>  Thu,  6 Jan 2000 00:14:12 +0900
+
+jfbterm (0.3.7-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hatta Shuzo <hattas@debian.or.jp>  Tue, 30 Nov 1999 10:21:07 +0900
+
+jfbterm (0.3.6-1) unstable; urgency=high
+
+  * New upstream release
+
+ -- Hatta Shuzo <hattas@debian.or.jp>  Fri, 26 Nov 1999 11:43:47 +0900
+
+jfbterm (0.3.5-1) unstable; urgency=high
+
+  * New upstream release
+
+ -- Hatta Shuzo <hattas@debian.or.jp>  Wed, 17 Nov 1999 16:37:15 +0900
+
+jfbterm (0.3.4-3.1) unstable; urgency=medium
+
+  * use $(DEB_HOST_ARCH) instead of `dpkg --print-architecture`,
+    closes: #50333
+
+ -- Fumitoshi UKAI <ukai@debian.or.jp>  Wed, 17 Nov 1999 16:21:16 +0900
+
+jfbterm (0.3.4-3) unstable; urgency=high
+
+  * configure --enable-vga16fb=no if an architecture is not i386
+    (closes: #50333)
+  * Changed description.
+
+ -- Hatta Shuzo <hattas@debian.or.jp>  Wed, 17 Nov 1999 00:14:59 +0900
+
+jfbterm (0.3.4-2) unstable; urgency=high
+
+  * use /bin/gzip instead of gzip (SECURITY FIX) (closes: #50233)
+
+ -- Hatta Shuzo <hattas@debian.or.jp>  Tue, 16 Nov 1999 12:05:24 +0900
+
+jfbterm (0.3.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hatta Shuzo <hattas@debian.or.jp>  Tue,  9 Nov 1999 12:03:18 +0900
+
+jfbterm (0.3.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hatta Shuzo <hattas@debian.or.jp>  Mon,  1 Nov 1999 12:47:31 +0900
+
+jfbterm (0.3.2-4) unstable; urgency=low
+
+  * replace `/etc' with `$(sysconfdir)' in Makefile.am 
+  * fixed segmentation fault while using w3m with mouse.
+
+ -- Hatta Shuzo <hattas@debian.or.jp>  Thu, 28 Oct 1999 13:50:30 +0900
+
+jfbterm (0.3.2-3) unstable; urgency=low
+
+  * added xfonts-base to Depends:
+  * change dependency of xfonts-cjk(from Suggests: to Recommends:)
+
+ -- Hatta Shuzo <hattas@debian.or.jp>  Thu, 28 Oct 1999 00:01:16 +0900
+
+jfbterm (0.3.2-2) unstable; urgency=low
+
+  * fixed segmentation fault when exit. (Thanks ukai-same)
+  * fixed packaging bugs.
+
+ -- Hatta Shuzo <hattas@debian.or.jp>  Tue, 26 Oct 1999 13:20:21 +0900
+
+jfbterm (0.3.2-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Hatta Shuzo <hattas@debian.or.jp>  Mon, 25 Oct 1999 11:37:55 +0900
+
+jfbterm (0.3.1-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Hatta Shuzo <hattas@debian.or.jp>  Wed, 20 Oct 1999 20:55:13 +0900
+
+

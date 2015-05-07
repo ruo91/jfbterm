@@ -1,0 +1,23 @@
+Source: jfbterm
+Section: utils
+Priority: optional
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends: debhelper (>= 5.0.0), autoconf, automake (>= 1.10)
+Standards-Version: 3.8.3
+Homepage: http://jfbterm.sourceforge.jp/
+
+Package: jfbterm
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, unifont
+Suggests: xfonts-base
+Description: multilingual terminal on Linux framebuffer
+ Jfbterm (J Framebuffer Terminal/Multilingual Extension) can display
+ multilingual text on Linux framebuffer.  It can display ISO-2022
+ text such as ISO-8859-{1-11,13-16}, ISO-2022-{JP,CN,KR}, EUC-JP, 
+ EUC-KR (aka Wangsung), EUC-CN (aka GB2312 or CN-GB).
+ It also supports UTF-8, and other coding system such as SHIFT_JIS by
+ using iconv(3).
+ .
+ It supports 8bpp PACKED-PIXELS PSEUDOCOLOR and (15|16|24|32) bpp
+ PACKED-PIXELS TRUECOLOR framebuffers.  It also supports 1bpp, 2bpp,
+ (and vga16fb on arch i386).
